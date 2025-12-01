@@ -19,7 +19,7 @@ spec:
         - name: backend-app
           # 주의: 아래 이미지 태그는 CI/CD 파이프라인에 의해 자동으로 업데이트됩니다.
           # 처음에는 placeholder-tag로 설정해 둡니다.
-          image: sngminkim/cloudnative-backend:placeholder-tag
+          image: sngminkim/cloudnative-backend:bb22215
           ports:
             - containerPort: 8080
           # 환경 변수 및 리소스 설정은 필요에 따라 추가
