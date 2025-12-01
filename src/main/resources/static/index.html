@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple CRUD Board</title>
+    <script defer src="main.js"></script>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        #board-list { border-collapse: collapse; width: 100%; }
+        #board-list th, #board-list td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .post-form { margin-top: 20px; padding: 15px; border: 1px solid #ccc; }
+        .post-form input, .post-form textarea { width: 95%; padding: 10px; margin-bottom: 10px; }
+        button { padding: 10px 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<h1>클라우드 네이티브 게시판</h1>
+
+<div class="post-form">
+    <h2>CRUD 게시판</h2>
+    <input type="hidden" id="postId">
+    <input type="text" id="postTitle" placeholder="제목" required><br>
+    <textarea id="postContent" placeholder="내용" rows="5" required></textarea><br>
+    <button onclick="savePost()">저장</button>
+    <button onclick="resetForm()">취소</button>
+</div>
+
+<hr>
+
+<h2>게시글 목록</h2>
+<table id="board-list">
+    <thead>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</body>
+</html>
