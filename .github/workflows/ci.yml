@@ -1,6 +1,9 @@
 # CI/CD 워크플로 (Continuous Integration / Continuous Deployment)
 name: CI/CD Pipeline for Backend
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -19,6 +22,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-java@v4
         with:
           java-version: '17'
